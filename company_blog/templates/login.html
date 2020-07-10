@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<form method="POST">
+
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+    {{ form.email.label(class="mt-2") }} {{ form.email(class='form-control') }}
+        <small id="emailHelp" class="form-text text-muted">kindly fill in your email.</small>
+  </div>
+
+    <div class="form-group">
+      {{ form.password.label(class="mt-2") }} {{ form.password(class='form-control')}}
+           <small id="passwordhelp" class="form-text text-muted">passwords are vital for authentication,please kindly fill in yours.</small>
+    </div>
+
+{{ form.submit(class="btn btn-success") }}
+</form>
+
+</div>
+
+{% endblock %}
